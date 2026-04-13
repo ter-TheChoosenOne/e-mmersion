@@ -1,0 +1,50 @@
+:root {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #241518;
+  background:
+    radial-gradient(circle at top, rgba(120, 20, 39, 0.12), transparent 32%),
+    linear-gradient(180deg, #fcf7f8 0%, #f4edef 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --maroon-950: #3c0d16;
+  --maroon-900: #58111f;
+  --maroon-800: #711526;
+  --maroon-700: #8e1f34;
+  --maroon-500: #bf4d63;
+  --rose-100: #fdecef;
+  --rose-50: #fff7f8;
+  --white: #ffffff;
+  --ink-900: #23171a;
+  --ink-600: #6b5357;
+  --ink-400: #9a8186;
+  --border-soft: rgba(88, 17, 31, 0.12);
+  --shadow-soft: 0 24px 60px rgba(78, 19, 30, 0.14);
+  --shadow-card: 0 16px 38px rgba(88, 17, 31, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
