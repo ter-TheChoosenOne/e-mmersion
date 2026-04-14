@@ -1,15 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-        {
-        "src": "package.json",
-        "use": "@vercel/node"
-        }
-    ],
-    "rewrites": [
-        {
-        "src": "/(.*)",
-        "dest": "/index.js"
-        }
-    ]
+  "routes": [
+    { "src": "/(.*)", "dest": "/frontend/index.html" }
+  ]
 }
