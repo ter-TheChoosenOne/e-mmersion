@@ -9,12 +9,21 @@ const app = express();
 connectDB();
 
 app.use(cors({
-   origin: [
-    'http://localhost:5173',
-    'https://work-immersion-monitoring-system-9z.vercel.app'
-   ],
-   credentials: true
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
 
+    const allowedOrigins = [
+      'http://localhost:5173',
+      'https://work-immersion-monitoring-system-9z.vercel.app'
+    ];
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(null, true); 
+    }
+  },
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
