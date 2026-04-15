@@ -1,13 +1,13 @@
 {
-  "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "http": "^0.0.1-security",
-    "mongoose": "^9.3.3",
-    "recharts": "^3.8.1",
-    "socket.io": "^4.8.3"
+  "name": "work-immersion-system",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm i && cd ../frontend && npm i"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "concurrently": "^8.2.2"
   }
 }

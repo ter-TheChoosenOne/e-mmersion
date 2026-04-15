@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://work-immersion-monitoring-system.onrender.com", // change if deployed
+  baseURL: import.meta.env.DEV ? '/api' : 'https://work-immersion-monitoring-system.onrender.com/api/v1',
 });
 
 API.interceptors.request.use((config) => {
@@ -16,7 +16,7 @@ API.interceptors.request.use((config) => {
 
 // Admin API instance
 const AdminAPI = axios.create({
-  baseURL: "https://work-immersion-monitoring-system.onrender.com",
+  baseURL: import.meta.env.DEV ? '/api' : 'https://work-immersion-monitoring-system.onrender.com/api/v1',
 });
 
 AdminAPI.interceptors.request.use((config) => {

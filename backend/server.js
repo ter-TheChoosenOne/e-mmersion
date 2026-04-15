@@ -42,6 +42,4 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Auth: http://localhost:${PORT}${BASE_URI}/auth`);
   console.log(`Admin: http://localhost:${PORT}${BASE_URI}/admin`);
-  console.log(`Teacher: http://localhost:${PORT}${BASE_URI}/teacher`);
-  console.log(`Student: http://localhost:${PORT}${BASE_URI}/student`);
 });
