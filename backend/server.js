@@ -8,23 +8,15 @@ const app = express();
 
 connectDB();
 
+
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-
-    const allowedOrigins = [
-      'http://localhost:5173',
-      'https://e-mmersion-first-version.vercel.app'
-    ];
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(null, true); 
-    }
-  },
+  origin: [
+    "http://localhost:5173",
+    "https://e-mmersion-first-version.vercel.app"
+  ],
   credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

@@ -1,8 +1,11 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.DEV ? '/api' : 'https://work-immersion-monitoring-system.onrender.com/api/v1',
+  baseURL: import.meta.env.VITE_API_URL,
+  withCredentials: true, // important for cookies
 });
+
+
 
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
