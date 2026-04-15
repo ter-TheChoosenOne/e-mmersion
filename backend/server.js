@@ -14,7 +14,7 @@ app.use(cors({
 
     const allowedOrigins = [
       'http://localhost:5173',
-      'https://work-immersion-monitoring-system-9z.vercel.app'
+      'https://e-mmersion-first-version.vercel.app'
     ];
 
     if (allowedOrigins.includes(origin)) {
